@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LTI - 恋爱人格测试</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 首页 -->
+        <div id="home-page" class="page active">
+            <div class="hero">
+                <div class="logo">
+                    <h1>LTI</h1>
+                    <p class="subtitle">Love Temperament Indicator</p>
+                    <p class="subtitle2">恋爱人格测试</p>
+                </div>
+                <div class="description">
+                    <p class="main-text">发现你在恋爱中的真实人格</p>
+                    <p class="hint">💕 20 道精选题目 · 💖 16 种人格类型 · 🌹 精准分析</p>
+                </div>
+                <button id="start-btn" class="btn-primary">💝 开始测试</button>
+            </div>
+        </div>
+
+        <!-- 测试页 -->
+        <div id="quiz-page" class="page">
+            <div class="quiz-container">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress"></div>
+                </div>
+                <div class="question-counter">
+                    <span id="current-q">1</span> / <span id="total-q">20</span>
+                </div>
+                <div class="question-card">
+                    <h2 id="question-text"></h2>
+                </div>
+                <div class="options" id="options-container">
+                    <!-- 选项由 JS 动态生成 -->
+                </div>
+            </div>
+        </div>
+
+        <!-- 结果页 -->
+        <div id="result-page" class="page">
+            <div class="result-container">
+                <div class="result-header">
+                    <p class="result-label">你的 LTI 恋爱人格类型是</p>
+                    <h1 class="result-type" id="result-type"></h1>
+                    <p class="result-name" id="result-name"></p>
+                </div>
+                <div class="result-content">
+                    <div class="type-description" id="type-description"></div>
+                    <div class="dimensions">
+                        <h3>📊 维度分析</h3>
+                        <div id="dimension-bars"></div>
+                    </div>
+                    <div class="similarities">
+                        <h3>💫 人格相似度</h3>
+                        <div id="similarities-container"></div>
+                    </div>
+                    <div class="fun-description">
+                        <h3>💬 你的真实写照</h3>
+                        <div id="fun-text" class="fun-text"></div>
+                    </div>
+                    <div class="traits">
+                        <h3>✨ 你的特点</h3>
+                        <ul id="traits-list"></ul>
+                    </div>
+                </div>
+                <div class="result-actions">
+                    <button id="retake-btn" class="btn-primary">🔄 重新测试</button>
+                    <button id="share-btn" class="btn-secondary">📤 分享结果</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 分享弹窗 -->
+    <div id="share-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3>分享你的结果</h3>
+            <div id="share-text"></div>
+            <button id="copy-btn" class="btn-primary">📋 复制文本</button>
+        </div>
+    </div>
+
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -107,7 +107,7 @@ const questions = [
   },
   {
     id: 11,
-    text: "对象问你"我好看吗"，你会？",
+    text: '对象问你"我好看吗"，你会？',
     options: [
       { text: "好看！宇宙第一好看！我配不上你！", dimension: "F", value: 2 },
       { text: "客观评价：今天妆有点浓", dimension: "R", value: 2 },
